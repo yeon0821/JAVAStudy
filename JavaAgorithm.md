@@ -44,7 +44,20 @@ public class Main {
 ```
 
 ```java
+//단어의 개수
+import java.util.Scanner;
+import java.util.StringTokenizer;
+public class Main {
+    public static void main(String[] args){
+        Scanner sc =new Scanner(System.in);
 
+        String S = sc.nextLine();
+
+        StringTokenizer st = new StringTokenizer(S, " ");
+        System.out.println(st.countTokens());
+    }
+
+}
 ```
 
 ```java
@@ -68,7 +81,7 @@ public class Main {
 ```
 
 ```java
-    // 별 찍기 - 2
+// 별 찍기 - 2
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
