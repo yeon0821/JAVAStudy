@@ -1,27 +1,4 @@
 ```java
-// 별 찍기 - 2
-import java.util.Scanner;
-public class Main {
-    public static void main(String[] args){
-        Scanner sc =new Scanner(System.in);
-
-        int a = sc.nextInt();
-
-        for(int i = 0; i < a; i++){
-            for(int j = 1; j < a-i; j++) {
-                System.out.print(" ");
-            }
-            for(int k = 0; k < i+1; k++)
-                System.out.print("*");
-            System.out.println("");
-        }
-    }
-
-}
-
-```
-
-```java
 //자바 계산기 - 예외처리
 import java.util.Scanner;
 public class Main {
@@ -67,6 +44,10 @@ public class Main {
 ```
 
 ```java
+
+```
+
+```java
 //X보다 작은수
 import java.util.Scanner;
 public class Main {
@@ -85,3 +66,27 @@ public class Main {
     }
 }
 ```
+
+```java
+    // 별 찍기 - 2
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args){
+        Scanner sc =new Scanner(System.in);
+
+        int a = sc.nextInt();
+
+        for(int i = 0; i < a; i++){
+            for(int j = 1; j < a-i; j++) {
+                System.out.print(" ");
+            }
+            for(int k = 0; k < i+1; k++)
+                System.out.print("*");
+            System.out.println("");
+        }
+    }
+
+}
+
+```
+
