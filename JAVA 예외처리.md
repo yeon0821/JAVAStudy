@@ -4,7 +4,7 @@
 
 - 예외 : 사용자의 잘못된 조작 또는 개발자의 잘못된 코딩으로 인해 발생하는 프로그램 오류
 
-  → 예외가 발생하면 프로그램은 곧바로 종료된다. 하지만, 예외처리를 통해 정상 실행 상태가 유지되도록 할 수 있다.
+  xxxxxxxxxx //피보나치 수열 -5import java.util.Scanner;public class Main {    public static void main(String[] args){        Scanner sc = new Scanner(System.in);​        int a = sc.nextInt();        System.out.println(fibo(a));    }​    public static int fibo(int n){        if (n <= 1)            return n;        else            return fibo(n-2) + fibo(n - 1);    }}java
 
 → 예외가 발생하면 프로그램은 곧바로 종료된다. 하지만, 예외처리를 통해 정상 실행 상태가 유지되도록 할 수 있다.
 

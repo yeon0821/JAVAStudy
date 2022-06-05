@@ -81,26 +81,30 @@ public class Main {
 ```
 
 ```java
-// 별 찍기 - 2
+// 45분 전
 import java.util.Scanner;
 public class Main {
-    public static void main(String[] args){
-        Scanner sc =new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int H = sc.nextInt();
+        int M = sc.nextInt();
 
-        int a = sc.nextInt();
+        if (M < 45) {
+            H--;
+            M = 60 - (45 - M);
+            if(H < 0){
+            H = 23;
 
-        for(int i = 0; i < a; i++){
-            for(int j = 1; j < a-i; j++) {
-                System.out.print(" ");
-            }
-            for(int k = 0; k < i+1; k++)
-                System.out.print("*");
-            System.out.println("");
         }
+        System.out.println(H + " " + M);
     }
+    else {
+            System.out.println(H + " "+ (M - 45));
+        }
 
+
+    }
 }
-
 ```
 
 ```java
@@ -132,5 +136,50 @@ public class Main {
 
     }
 
+}
+```
+
+```java
+//피보나치 수열 -1
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int F1 =0, F2 = 1, F3 = 1;
+
+        for(int i = 2; i <= n; i++)
+        {
+            F3 = F1 + F2;
+            F1 = F2;
+            F2 = F3;
+        }
+        System.out.println(F3);
+    }
+}
+/*
+피보나치 수열은 0과 1로 시작하며 바로 앞의 두 피보나치수의 합이 다음 피보나치수가 된다.
+즉,첫번째항과 두번째항의 합이 세번째 항이되고, 두번째항과 세번째항의 합이 네번째항이 된다.
+수식으로 표현하면 f(n)=f(n-2)+f(n-1)인데 재귀함수로 풀면 중복계산되어 시간이 많이 걸리므로 반복을 이용해서 풀수 있다.
+/*
+```
+
+```java
+//피보나치 수열 -5
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        System.out.println(fibo(a));
+    }
+
+    public static int fibo(int n){
+        if (n <= 1)
+            return n;
+        else
+            return fibo(n-2) + fibo(n - 1);
+    }
 }
 ```
