@@ -215,3 +215,36 @@ public class Main {
     }
 }
 ```
+
+```java
+//벌집
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+
+        int N = in.nextInt();
+        int count = 1; // 겹 수(최소 루트)
+        int range = 2; // 범위 (최솟값 기준)
+
+        if (N == 1) {
+            System.out.print(1);
+        }
+
+        else {
+            while (range <= N) {   // 범위가 N보다 커지기 직전까지 반복
+                range = range + (6 * count);   // 다음 범위의 최솟값으로 초기화
+                count++;   // count 1 증가
+            }
+            System.out.print(count);
+        }
+    }
+}
+
+/*N 이 1 일경우 바로 1을 출력하면 되고,
+그 외에는 range (범위)가 N 을 넘기 직전까지 최솟값 range를 계속 증가시켜주는 것이다.
+그리고 count 를 1 증가시키면 끝.
+만약 최솟값 범위가 N 을 넘어가면 해당 범위가 아니게 되므로 자연스레 반복문은 종료되는 원리
+*/
+```
